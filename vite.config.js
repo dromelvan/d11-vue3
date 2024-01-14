@@ -22,10 +22,16 @@ export default defineConfig({
     }),
     ViteFonts({
       google: {
-        families: [{
-          name: 'Roboto',
-          styles: 'wght@100;300;400;500;700;900',
-        }],
+        families: [
+          {
+            name: 'Roboto',
+            styles: 'wght@100;300;400;500;700;900',
+          },
+          {
+            name: 'Roboto Condensed',
+            styles: 'wght@100;300;400;500;700;900',
+          }
+        ],
       },
     }),
   ],

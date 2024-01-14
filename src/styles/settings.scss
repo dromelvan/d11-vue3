@@ -3,8 +3,48 @@
  *
  * Configures SASS variables and Vuetify overwrites
  */
+$roboto: Roboto, sans-serif;
+$roboto-condensed: 'Roboto Condensed', Roboto, sans-serif;
 
 // https://vuetifyjs.com/features/sass-variables/`
-// @use 'vuetify/settings' with (
-//   $color-pack: false
-// );
+@use 'vuetify/settings' with (
+  $color-pack: false,
+
+  $body-font-family: $roboto-condensed,
+  $heading-font-family: $roboto,
+
+  $button-plain-opacity: 1.0,
+
+  $list-color: rgb(var(--v-theme-on-surface)),
+
+  $list-subheader-color: rgb(var(--v-theme-on-surface-variant)),
+  $list-subheader-font-size: .9rem,
+
+  $list-item-icon-opacity: inherit,
+
+);
+
+// Typography settings -------------------------------------------------------------------------------------------------
+// Doing this until we can get the stupid typography map stuff to work
+
+.v-btn {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+}
+
+.text-menu {
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+}
+
+// Component settings --------------------------------------------------------------------------------------------------
+
+.v-list-item:hover {
+  background-color: rgb(var(--v-theme-secondary));
+}
